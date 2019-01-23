@@ -1,0 +1,398 @@
+
+
+
+
+.bannerHolder{
+	/* The main banner unordered list */
+
+
+	float:left;
+	margin:20px 15px;
+	padding:10px;
+	padding-left: 28px!important;
+	background: rgba(19, 35, 47, 0.9);
+	border:1px solid #eee;
+
+	/* CSS3 rounded corners */
+
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+}
+
+.bannerHolder li{
+	/* Disabling the bullet of the li elements: */
+	list-style:none;
+	display:inline;
+}
+
+.banner{
+	/* The banner divs */
+	position:relative;
+	width:125px;
+	height:125px;
+	overflow:hidden;
+	float:left;
+	margin:5px;
+}
+
+.banner img{
+	/* The banner divs */
+	display:block;
+	border:none;
+}
+
+.banner div{
+	/* The dark animated divs */
+
+	position:absolute;
+	z-index:100;
+	background-color:#222;
+	width:60px;
+	height:60px;
+	cursor:pointer;
+
+	/*	Setting a really big value for border-radius
+		will make the divs perfect circles */
+
+	-moz-border-radius:100px;
+	-webkit-border-radius:100px;
+	border-radius:100px;
+}
+
+/*	Positioning the animated divs outside the
+	corners of the visible banner area: */
+
+.banner .cornerTL{ left:-63px;top:-63px; }
+.banner .cornerTR{ right:-63px;top:-63px; }
+.banner .cornerBL{ left:-63px;bottom:-63px; }
+.banner .cornerBR{ right:-63px;bottom:-63px; }
+
+.banner p{
+	/* The "Visit Company" text */
+
+	display:none;	/* hidden by default */
+
+	left:0;
+	top:57px;
+	width:100%;
+	z-index:200;
+	position:absolute;
+	color:white;
+	font-size:11px;
+	text-align:center;
+
+	cursor:pointer;
+}
+
+.admin div {
+	border:1px solid #fff;
+	word-wrap: break-word;
+	margin-top: 5px;
+}
+/* Стили для формы */
+
+
+
+
+
+
+
+
+
+/* The styles below are only necessary for the styling of the demonstration page: */
+
+#main{
+	position:relative;
+	margin:0 auto 90px;
+	width:660px;
+}
+
+.auth{
+	padding:20px 0;
+	text-align:right;
+	text-shadow:0 1px 1px white;
+}
+.auth a h6{
+	padding-right: 10px;
+	margin-top: 5px;
+	display: inline-block;
+}
+
+h2{
+	font-size:14px;
+	font-weight:normal;
+	text-align:center;
+
+	position:absolute;
+	right:40px;
+	top:40px;
+}
+
+a, a:visited {
+	color:#0196e3;
+	text-decoration:none;
+	outline:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+
+
+
+
+/*LOGIN*/
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	background: #c1bdba!important;
+	font-family: 'Philosopher', sans-serif!important;
+
+}
+
+a {
+	text-decoration: none;
+	color: #1ab188;
+	transition: .5s ease;
+}
+a:hover {
+	color: #179b77;
+}
+
+.form {
+	background: rgba(19, 35, 47, 0.9);
+	padding: 40px;
+	max-width: 600px;
+	margin: 40px auto;
+	border-radius: 4px;
+	box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.tab-group {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 40px 0;
+}
+.tab-group:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.tab-group li a {
+	display: block;
+	text-decoration: none;
+	padding: 15px;
+	background: rgba(160, 179, 176, 0.25);
+	color: #a0b3b0;
+	font-size: 20px;
+	float: left;
+	width: 50%;
+	text-align: center;
+	cursor: pointer;
+	transition: .5s ease;
+}
+.tab-group li a:hover {
+	background: #179b77;
+	color: #ffffff;
+}
+.tab-group .active a {
+	background: #1ab188;
+	color: #ffffff;
+}
+
+.tab-content > div:last-child {
+	display: none;
+}
+
+h1 {
+	text-align: center;
+	color: #ffffff;
+	font-weight: 300;
+	margin: 0 0 40px;
+}
+
+label {
+	position: absolute;
+	-webkit-transform: translateY(6px);
+	transform: translateY(6px);
+	left: 13px;
+	color: rgba(255, 255, 255, 0.5);
+	transition: all 0.25s ease;
+	-webkit-backface-visibility: hidden;
+	pointer-events: none;
+	font-size: 22px;
+}
+label .req {
+	margin: 2px;
+	color: #1ab188;
+}
+
+label.active {
+	-webkit-transform: translateY(50px);
+	transform: translateY(50px);
+	left: 2px;
+	font-size: 14px;
+}
+label.active .req {
+	opacity: 0;
+}
+
+label.highlight {
+	color: #ffffff;
+}
+
+input, textarea {
+	font-size: 22px;
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 5px 10px;
+	background: none;
+	background-image: none;
+	border: 1px solid #a0b3b0;
+	color: #ffffff;
+	border-radius: 0;
+	transition: border-color .25s ease, box-shadow .25s ease;
+}
+input:focus, textarea:focus {
+	outline: 0;
+	border-color: #1ab188;
+}
+
+textarea {
+	border: 2px solid #a0b3b0;
+	resize: vertical;
+}
+
+.field-wrap {
+	position: relative;
+	margin-bottom: 40px;
+	height: 35px;
+}
+
+.top-row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.top-row > div {
+	float: left;
+	width: 48%;
+	margin-right: 4%;
+}
+.top-row > div:last-child {
+	margin: 0;
+}
+
+.r {
+	border: 0;
+	outline: none;
+	border-radius: 0;
+	padding: 15px 0;
+	font-size: 1.5rem;
+	font-size: 1.5rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	background: #1ab188;
+	color: #ffffff;
+	transition: all 0.5s ease;
+	-webkit-appearance: none;
+}
+.r:hover, .r:focus {
+	background: #179b77;
+}
+
+.button-block {
+	display: block;
+	width: 100%;
+}
+
+.forgot {
+	margin-top: -20px;
+	text-align: right;
+}
+
+
+select{
+	font-size: 22px;
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 5px 10px;
+	background: rgba(19, 35, 47, 0.9);
+	background-image: none;
+	border: 1px solid #a0b3b0;
+	color: #ffffff;
+	border-radius: 0;
+	transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+.r1 {
+	margin-bottom: 20px;
+	padding: 15px 7px;
+	border-radius:15px;
+	font-size: 1.3rem;
+}
+
+r2{
+
+}
+
+.f1{
+	padding-top: 20px;
+	color:#ffffff;
+	background-color: #171921!important;
+}
+.up-button {
+	display: contents;
+	cursor: pointer;
+	padding-bottom: 10px;
+	color: #fff;
+}
+.down-button {
+	display: contents;
+	cursor: pointer;
+	padding-top: 10px;
+	color: #fff;
+}
+.f2 {
+	background: rgba(19, 35, 47, 0.9);
+	color: #fff;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.f3 {
+	padding-top: 20px;
+	padding-bottom: 15px;
+	color:#ffffff;
+	background-color: #171921!important;
+	text-align: center;
+}
+.f4 {
+	color:#ffffff;
+	background-color: #171921!important;
+	text-align: center;
+	height: 100px;
+}
+.f4 div div{
+	padding-top: 20px;
+}
+.f4 div div.col-8 i{
+	padding-left: 15px;
+}
+
+
+
+
+
+
+
